@@ -3,15 +3,16 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-const main = async () => {
+export const main = async (question) => {
 
 const llm = new OpenAI({
     // openAIApiKey: process.env.OPENAI_API_KEY,
-    temperature: 1,
+    temperature: 0.5,
   });
 
-  const result = await llm.predict("Cual sería un buen nombre para una compañia que hace soluciones web3 financieras para defi, innovadora");
+  const result = await llm.predict(question);
   console.log(result);
+
 }
 
 main();
