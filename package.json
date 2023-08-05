@@ -16,6 +16,8 @@
     "chalk": "^5.3.0",
     "dotenv": "^16.3.1",
     "figlet": "^1.6.0",
-    "langchain": "^0.0.120"
+    "hnswlib-node": "^1.4.2",
+    "langchain": "^0.0.120",
+    "yargs": "^17.7.2"
   }
 }
