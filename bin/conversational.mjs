@@ -18,7 +18,6 @@ export const startLes = async(readline) => {
   });
   
   let userInput = await readline.question(chalk.green(intro.response) + "\n\n");
-
 while (userInput !== "q") {
 
   try {
@@ -41,6 +40,8 @@ while (userInput !== "q") {
       userInput = await readline.question("\nSomething went wrong, try asking again\n");
     }
   }
+
+  console.log(chalk.red("\n" + "Hasta luego :)" + "\n"));
   
   readline.close();
 }
