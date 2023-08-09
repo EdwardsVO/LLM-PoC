@@ -7,7 +7,7 @@ import { ChatOpenAI } from "langchain/chat_models/openai";
 import chalk from "chalk";
 dotenv.config();
 
-const chat = new ChatOpenAI({ temperature: 0 });
+const chat = new ChatOpenAI({ temperature: 0, openAIApiKey: process.env.OPENAI_API_KEY });
 const memory = new BufferMemory();
 const chain = new ConversationChain({ llm: chat, memory: memory });
 

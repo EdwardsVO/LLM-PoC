@@ -10,7 +10,7 @@ import { BufferMemory } from "langchain/memory";
 import chalk from "chalk";
 
 const VECTOR_PATH = "./data/Documents.index";
-const model = new ChatOpenAI({});
+const model = new ChatOpenAI({temperature: 0, openAIApiKey: process.env.OPENAI_API_KEY});
 
 export const qa = async (readline) => {
   // LOAD PDF DATA
